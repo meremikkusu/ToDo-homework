@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 function CompletedTasks({ tasks }) {
   const completedTasks = tasks.filter((task) => task.completed);
@@ -12,12 +11,9 @@ function CompletedTasks({ tasks }) {
           <li key={index}>
             <strong>{task.title}</strong> <br />
             {task.description} <br />
-            Дедлайн: {task.deadline}
           </li>
         ))}
       </ul>
-      <br />
-      <Link to="/">Назад на главную</Link>
     </div>
   );
 }
